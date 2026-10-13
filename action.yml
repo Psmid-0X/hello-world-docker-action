@@ -1,0 +1,18 @@
+name: Say Hi! 👋
+description: Say hi and save time
+author: Petr Smid
+
+inputs:
+  who-to-greet:
+    description: "who should we say hi to"
+    default: 'World'
+
+outputs:
+  time:
+    description: "The time we were friendly"
+
+runs:
+  using: docker
+  image: dockerfile
+  args:
+    - ${{ inputs.who-to-greet }}
